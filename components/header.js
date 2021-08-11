@@ -7,36 +7,29 @@ export default function Header() {
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
 
   return (
-    <header className="bg-green-600">
-      <div className="flex flex-wrap items-center justify-between lg:container px-4 py-6 mx-auto md:flex-no-wrap md:px-6">
+    <header className="bg-gray-700">
+      <div className="max-w-2xl mx-auto">
+      <div className="flex flex-wrap items-center justify-between lg:container p-2 mx-auto md:flex-no-wrap md:px-6">
         <div className="flex items-center">
-          <Image
-            src="/tailwind-logo.svg"
-            width={40}
-            height={40}
-            priority
-            alt="Tailwind CSS logo"
-          />
-
           <Link href="/">
-            <a className="text-lg md:text-xl font-bold ml-3 text-white">
-              Next.js Starter Tailwind
+            <a className="text-xl md:text-2xl sm:text-2xl font-bold text-white">
+              Nick Mayernik
             </a>
           </Link>
         </div>
 
         <button
-          className="flex items-center block px-3 py-2 text-white border border-white rounded md:hidden"
+          className="flex items-center block px-3 py-2 text-white md:hidden"
           onClick={() => setMobileMenuIsOpen(!mobileMenuIsOpen)}
         >
+       
           <svg
-            className="w-3 h-3 fill-current"
+            className="w-5 h-5 fill-current"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
           >
             <title>Menu</title>
-            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-          </svg>
+            <path fill-rule="evenodd" d="M3 7a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 13a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />          </svg>
         </button>
 
         <ul
@@ -46,8 +39,9 @@ export default function Header() {
           )}
         >
           {[
-            { title: "Home", route: "/" },
             { title: "About", route: "/about" },
+            { title: "Projects", route: "/projects" },
+            
           ].map(({ route, title }) => (
             <li className="mt-3 md:mt-0 md:ml-6" key={title}>
               <Link href={route}>
@@ -56,6 +50,7 @@ export default function Header() {
             </li>
           ))}
         </ul>
+      </div>
       </div>
     </header>
   );

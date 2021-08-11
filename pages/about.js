@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function AboutPage() {
   return (
-    <div className="grid md:grid-cols-2 gap-6 grid-cols-1">
+    <div className="max-w-xl mx-auto grid md:grid-cols-2 gap-6 grid-cols-1">
       <div>
         <section className="mb-6">
           <h2 className="mb-3 text-xl font-bold">What is Tailwind?</h2>
