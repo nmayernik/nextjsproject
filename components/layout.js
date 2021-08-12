@@ -7,7 +7,7 @@ export default function Layout(props) {
       <Header />
 
       <main className="bg-trueGray-50 flex-1">
-        <div className="lg:container mx-auto p-3 md:px-6 md:py-12">
+        <div className="lg:container mx-auto p-6 md:px-6 md:py-12">
           {props.children}
         </div>
       </main>
