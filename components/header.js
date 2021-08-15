@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import cn from "classnames";
+import { Menu } from "react-feather";
 import Image from "next/image";
 
 export default function Header() {
@@ -19,18 +20,13 @@ export default function Header() {
         </div>
 
         <button
-          className="flex items-center block px-3 py-2 text-gray-700 md:hidden"
-          onClick={() => setMobileMenuIsOpen(!mobileMenuIsOpen)}
-        >
-       
-          <svg
-            className="w-5 h-5 fill-current"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+          className="flex items-center block px-3 py-2 text-gray-700 md:hidden" 
+          onClick={() => setMobileMenuIsOpen(!mobileMenuIsOpen)} >               
+            <Menu />            
             <title>Menu</title>
-            <path fill-rule="evenodd" d="M3 7a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 13a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />          </svg>
         </button>
+
+       
 
         <ul
           className={cn(

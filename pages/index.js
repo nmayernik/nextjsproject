@@ -6,7 +6,7 @@ export default function IndexPage() {
       <div className="max-w-xl mx-auto justify-center py-12">
         <div id="text">
           <h1 className="text-4xl text-trueGray-700 font-semibold pb-1">Hello, I'm Nick Mayernik.</h1>
-          <p class="mt-3 text-base text-trueGray-600 sm:mt-5 sm:text-xl sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+          <p class="mt-3 text-xl text-trueGray-600 sm:mt-5 sm:max-w-xl sm:mx-auto md:mt-5 lg:mx-0">
              I'm a full-stack UX Professional, working in research, design, and development to create humane products. I'm currently leading Design & Development for PYRAMID.
           </p>
         </div>
