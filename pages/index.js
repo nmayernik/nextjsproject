@@ -2,29 +2,38 @@ import Image from "next/image";
 
 export default function IndexPage() {
   return (
-    <div className="">
-      <div className="max-w-xl mx-auto justify-center py-12">
-        <div id="text">
-          <h1 className="text-4xl text-trueGray-700 font-semibold pb-1">Hello, I'm Nick Mayernik.</h1>
-          <p class="mt-3 text-xl text-trueGray-600 sm:mt-5 sm:max-w-xl sm:mx-auto md:mt-5 lg:mx-0">
-             I'm a full-stack UX Professional, working in research, design, and development to create humane products. I'm currently leading Design & Development for PYRAMID.
+    <div className="max-w-xl mx-auto">
+      <div className="py-14 lg:py-20 px-4">
+          <h1 className="lg:text-title-desktop text-title-mobile text-opacity-90 font-serif font-semibold italic pt-3">I'm <span className="text-system-green">Nick</span>, a full-stack UX Designer.</h1>
+          <p class="py-2 font-mono text-base lg:text-lg text-opacity-70">
+            I work across research, design and development to help products connect with people.
           </p>
-        </div>
-        <div id="buttons">
-          <div class="mt-3 sm:mt-8 sm:flex lg:justify-start">
-            <div class="">
-              <a href="#" class="w-full flex items-center justify-center px-8 py-2 sm:py-3 border border-transparent font-medium rounded-xl text-trueGray-700 bg-gray-200 hover:cursor-pointer hover:bg-trueGray-300 md:py-4 md:text-lg md:px-10">
-                More About Me
+
+         <div className="mt-6 grid justify-items-center">
+              <a href="http://changelog.nickmayernik.com" class="w-full text-center px-16 py-4 sm:py-3 border border-system-dark dark:border-system-light border-opacity-10 text-system-dark dark:text-system-light font-semibold text-base rounded-full bg-system-dark dark:bg-system-light bg-opacity-5 hover:bg-opacity-10">
+                View my changelog
               </a>
+          </div>  
+       </div>
+
+       <div className="py-6 lg:py-20 px-4">
+          <h2 className="py-2 font-mono text-base lg:text-lg text-system-dark dark:text-system-light text-opacity-50">
+            Recent Posts
+          </h2>
+          <a>             
+            <div className="pt-4">              
+              <div className="px-6 py-6 bg-system-dark bg-opacity-5 border border-system-dark border-opacity-10 rounded-2xl">
+                <h3 className="font-serif font-semibold text-lg text-system-dark dark:text-system-light">
+                  Focus Modes on iOS 15
+                </h3>
+                <p className="pt-1 font-serif text-base text-system-dark dark:text-system-light">Caption <br />caption line two</p>
+                <p className="pt-2 font-mono text-base text-system-dark dark:text-system-light">Date</p>
+              </div>             
             </div>
-            <div class="mt-3 sm:mt-0 sm:ml-3">
-              <a href="http://changelog.nickmayernik.com" class="w-full flex items-center justify-center px-8 py-2 sm:py-3 border border-transparent text-base font-medium rounded-xl text-blue-500 bg-blue-100 hover:bg-blue-200 md:py-4 md:text-lg md:px-10">
-                My Changelog
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+           </a>
+
+          
+       </div>
     </div>
   );
 }

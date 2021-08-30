@@ -6,8 +6,8 @@ export default function Layout(props) {
     <div className="flex flex-col min-h-screen">
       <Header />
 
-      <main className="bg-trueGray-50 flex-1">
-        <div className="lg:container mx-auto p-6 md:px-6 md:py-12">
+      <main className="bg-system-light dark:bg-system-dark flex-1">
+        <div className="lg:container mx-auto">
           {props.children}
         </div>
       </main>

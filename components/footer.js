@@ -8,7 +8,7 @@ export default function Footer() {
             href="https://taylorbryant.dev/"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-bold"
+            className="font-semibold"
           >
             Nick Mayernik
           </a>
@@ -19,7 +19,7 @@ export default function Footer() {
             href="https://github.com/oddstronaut/next-starter-tailwind"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-bold"
+            className="font-semibold"
           >
             GitHub
           </a>

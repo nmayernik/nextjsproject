@@ -11,6 +11,8 @@ function MyApp({ Component, pageProps }) {
           name="Description"
           content="Full-stack UX Professional"
         />
+
+        <meta name="theme-color" content="#EBECED" media="(prefers-color-scheme: dark)" />
       </Head>
 
       <Component {...pageProps} />
