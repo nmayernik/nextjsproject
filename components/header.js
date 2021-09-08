@@ -8,7 +8,7 @@ export default function Header() {
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
 
   return (
-    <header className="bg-system-light dark:bg-system-dark px-5 py-5">
+    <header className="bg-system-light dark:bg-system-dark bg-opacity-90 px-5 py-3 sm:py-5 sticky top-0 z-50 backdrop-filter backdrop-blur-lg">
       <div className="max-w-4xl mx-auto">
       <div className="flex flex-wrap items-center justify-between lg:container mx-auto md:flex-no-wrap md:px-6">
         <div className="flex items-center">
@@ -20,9 +20,9 @@ export default function Header() {
         </div>
 
         <button
-          className="flex items-center block px-3.5 py-0.5 font-semibold text-base text-system-light dark:text-system-light bg-system-dark dark:bg-system light bg-opacity-5 rounded-lg border border-system-dark dark:border-system-light border-opacity-10 md:hidden" 
+          className="flex items-center px-3.5 py-1 font-semibold bg-system-light drop-shadow-2xl	rounded-full bg-opacity-90 text-base text-system-dark text-opacity-80 hover:bg-opacity-80 md:hidden" 
           onClick={() => setMobileMenuIsOpen(!mobileMenuIsOpen)} >               
-            <p>MENU</p>            
+            menu            
             <title>Menu</title>
         </button>
 
@@ -30,7 +30,7 @@ export default function Header() {
 
         <ul
           className={cn(
-            "md:flex flex-col md:flex-row md:items-center md:justify-center text-sm w-full md:w-auto",
+            "py-1 md:flex flex-col md:flex-row md:items-center md:justify-center text-sm w-full md:w-auto backdrop-filter backdrop-blur-lg",
             mobileMenuIsOpen ? `block` : `hidden`
           )}
         >
@@ -42,9 +42,9 @@ export default function Header() {
 
             
           ].map(({ route, title }) => (
-            <li className="mt-3 md:mt-0 md:ml-12" key={title}>
+            <li className="mt-5 md:mt-0 md:ml-12" key={title}>
               <Link href={route}>
-                <a className="grid justify-items-center dark:text-system-light hover:text-blue-500 font-medium text-base">{title}</a>
+                <a className="grid justify-items-center dark:text-system-light hover:text-system-blue font-regular text-base">{title}</a>
               </Link>
             </li>
           ))}

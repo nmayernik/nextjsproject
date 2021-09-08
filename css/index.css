@@ -12,11 +12,45 @@
   }
 
 * {
-  color: #1C1C1D;
+  @apply text-system-dark;
 }
 
 @media (prefers-color-scheme: dark) {
   * {
-    color: #F0F1F2;
+    @apply text-system-light;
   }
+  body {
+    @apply bg-system-dark;
+  }
+}
+
+.post *{
+  @apply mx-auto;
+}
+.post h1{
+  @apply text-xl;
+  @apply pb-2;
+  @apply font-semibold;
+  @apply text-opacity-90;
+}
+
+.post h2{
+
+}
+
+.post h3{
+  
+}
+
+.post img{
+  @apply mx-auto;
+  @apply max-w-3xl;
+  
+  @apply rounded-2xl;
+}
+
+
+.post p {
+  @apply mb-5;
+  @apply text-opacity-90;
 }
