@@ -6,16 +6,19 @@ export default function Slug({ post }){
   const {heroImage, title, content, description, publishDate} = post.fields
   
   return  (
-    <div className="post">
-    <div className="max-w-3xl mx-auto py-20 px-5 ">
-      <div id="intro" className="max-w-2xl mx-auto pb-10">
-        <img src={'https://' + heroImage.fields.file.url} className="mx-auto"/>
-        <h1 className="text-4xl leading-tight font-serif font-semibold pb-1">{title}</h1>
-        <p className="text-xl font-mono font-regular text-opacity-50">{publishDate}</p>
+    <div className="">
+    <div className="max-w-3xl px-3 py-12 mx-auto prose ">
+      <div id="intro" className="pb-10">
+        <h1 className="px-2 pb-1 font-serif text-4xl font-semibold leading-tight">{title}</h1>
+        <p className="px-2 font-mono text-xl text-opacity-50 font-regular">{publishDate}</p>
+        <img src={'https://' + heroImage.fields.file.url} className="my-5 rounded-xl"/>
+
+     
+
       </div>
-      <div id="content" className="max-w-2xl mx-auto">
-        <div className="text-lg font-serif font-regular text-opacity-80">
-          <div className="post">{documentToReactComponents(content)}</div>
+      <div id="content" className="">
+        <div className="font-serif text-lg font-regular text-opacity-80">
+          <div className="px-2 post">{documentToReactComponents(content)}</div>
           </div>
       </div>
 
@@ -32,7 +35,7 @@ const client = createClient({
 })
 
 export const getStaticPaths = async () => {
-  const res = await client. getEntries({
+  const res = await client.getEntries({
     content_type: 'blogPost'
   })
 

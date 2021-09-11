@@ -24,9 +24,19 @@
   }
 }
 
-.post *{
-  @apply mx-auto;
+.project h2 {
+  @apply text-2xl;
+  @apply font-bold;
 }
+
+
+
+.project p {
+  @apply text-base;
+  @apply my-2;
+  @apply text-opacity-80;
+}
+
 .post h1{
   @apply text-xl;
   @apply pb-2;
@@ -53,4 +63,16 @@
 .post p {
   @apply mb-5;
   @apply text-opacity-90;
+}
+
+@layer utilities {
+  @variants responsive {
+    .masonry {
+      column-count: 2;
+      column-gap: 1.25rem;
+    }
+    .break-inside {
+      break-inside: avoid;
+    }
+  }
 }

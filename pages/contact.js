@@ -1,9 +1,9 @@
 export default function Contact() {
 
     return(
-        <div className="max-w-3xl mx-auto my-12">
+        <div className="max-w-3xl px-3 py-12 mx-auto">
             <div id="title">
-                <h1 className="text-title-desktop font-bold py-6">
+                <h1 className="py-6 font-bold text-title-desktop">
                     Contact
                 </h1>
 
@@ -15,11 +15,11 @@ export default function Contact() {
 
             <div id="body" className="my-8">
                 <div id="Office Hours">
-                    <h2 className= "text-xl font-semibold py-3">
+                    <h2 className= "py-3 text-xl font-semibold">
                         Schedule an Office Hours Meeting
                     </h2>
                     
-                    <p className="text-system-white text-opacity-50">
+                    <p className="text-opacity-50 text-system-white">
                         //Calendso goes here
                     </p>
                 </div>
